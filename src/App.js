@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles.css'
+import Label from './Label'
+import Button from './Button'
 
-function App() {
+const App = () => {
+  
+  const obj = {
+   firstName: "Rene",
+   lastName: "Krewinkel"
+  }
+
+  const showAlert = () => {
+    alert(`Dit komt uit App`)
+  }
+
+  const name = `hello ${ obj.firstName} ${obj.lastName}`
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      <Label text={ name } 
+             kleur={`blauw`} 
+             fontSize={ 20 } />
+
+      <Button text={`klik mij!`} action={ showAlert } />
+     </div>
+   )
+  
 }
 
-export default App;
+export default App
