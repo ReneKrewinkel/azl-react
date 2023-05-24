@@ -1,7 +1,7 @@
 const Label = ({ text, kleur, fontSize }) => {
     
     return(
-        <div className={ `Label ${kleur}` }>
+        <div className={ 'tailwind tralala' }>
             { text }
         </div>
     )
